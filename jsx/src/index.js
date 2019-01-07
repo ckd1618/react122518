@@ -11,16 +11,17 @@ function clickHere() {
 const App =() => {
     return (
         <div>
-            <label className="label" for="name">Enter name: </label>
+            <label className="label" htmlFor="name">Enter name: </label>
             <input id="name" type="text" />
             <button style={{backgroundColor: 'blue', color: 'white'}}>{clickHere()}</button>
         </div>
     );
 };
 
+//take the react component and show it on the screen
 ReactDOM.render(
     <App />,
     document.querySelector('#root')
 );
 
-//take the react component and show it on the screen
+
