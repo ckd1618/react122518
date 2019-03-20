@@ -31,9 +31,13 @@ class SongList extends Component {
 }
 
 const mapStateToProps= (state) => {
-
-
+    //state here is combineReducers function from the /reducers/index.js file, which is basically your store
     return {songs: state.songs};
+    //this line above will show up as props inside of this very component, see the line under renderList, it references props.songs
 }
 
-export default connect(mapStateToProps, { selectSong })(SongList);
+
+export default connect(mapStateToProps, { selectSong: selectSong })(SongList);
+//the first () following connect are passed in as props to the second (SongList)
+//you can use es2015 syntax to shorten it down to:
+//export default connect(mapStateToProps, { selectSong })(SongList);

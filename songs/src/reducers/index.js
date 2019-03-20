@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+//this is a named export {combinedReducers}
 
 const songsReducer = () => {
     return [
